@@ -69,7 +69,7 @@ npm run build
 ---
 ## 👨‍💻 Author
 
-- Fidelis Chigbata
+- Chigbata-Fidelis Chizoba
 - Frontend Developer
 - GitHub: https://github.com/chyzee2006
   
