@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "./Header.css";
 import anime3 from '../assets/anime3.jpg'

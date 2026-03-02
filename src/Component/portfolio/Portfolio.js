@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Portfolio.css';
 import ecommerce from '../assets/ecommerce.jpg';
 import taskmanagement from '../assets/taskmanagement.jpg';
