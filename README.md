@@ -2,7 +2,7 @@
 
 A **professional developer portfolio website** built with React to showcase my skills, experience, and projects.
 
-🔗 **Live Demo:** https://your-live-url  
+🔗 **Live Demo:** https://app.netlify.com/projects/chyzee-portfolio-website/  
 
 ---
 
