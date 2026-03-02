@@ -1,36 +1,31 @@
-import { useState } from "react";
-import Button from "./Component/Button";
-import Card from "./Component/Card";
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from './Component/navbar/Header'
+import Homepage from './Component/homepage/Homepage'
+import About from './Component/aboutpage/About'
+import Portfolio from './Component/portfolio/Portfolio'
+import Services from './Component/servicepage/Services'
+import Contactus from './Component/contactuspage/Contactus'
+import Blog from './Component/blogpage/Blog'
+import Footer from './Component/footer/Footer'
+import './App.css'
 
 function App() {
-  const companies = [
-    { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
-    { name: 'Company Two', category: 'Retail', start: 1992, end: 2008 },
-    { name: 'Company Three', category: 'Auto', start: 1999, end: 2007 },
-    { name: 'Company Four', category: 'Retail', start: 1989, end: 2010 },
-    { name: 'Company Five', category: 'Technology', start: 2009, end: 2014 },
-    { name: 'Company Six', category: 'Finance', start: 1987, end: 2010 },
-    { name: 'Company Seven', category: 'Auto', start: 1986, end: 1996 },
-    { name: 'Company Eight', category: 'Technology', start: 2011, end: 2016 },
-    { name: 'Company Nine', category: 'Retail', start: 1981, end: 1989 }
-];
-const [user, setUser] = useState('')
- function setUser() {
-  return "john";
- }
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <Button link="com" name="click me now now" /> */}
-    {/* {
-      companies.map((company) => (
-        // <Card name={company.name} category={company.category} start />
-        
-      )) */}
-    
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
+
 export default App;

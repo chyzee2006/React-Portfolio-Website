@@ -3,7 +3,7 @@ import React from 'react'
 function Button(props) {
   return (
     
-    <a href={props.link} >{props.name}</a>
+    <a href={props.url} >{props.name}</a>
   )
 }
 

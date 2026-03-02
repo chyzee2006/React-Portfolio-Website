@@ -1,0 +1,193 @@
+:root {
+  --carousel-overlay-bg: rgba(0, 0, 0, 0.5);
+  --carousel-text-color: #ffffff;
+  --carousel-dot-inactive: rgba(255, 255, 255, 0.5);
+  --carousel-dot-active: var(--hover-color);
+}
+
+.homepage-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.homepage-container {
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Slick Carousel Base Styles */
+.homepage-carousel {
+  width: 100%;
+  max-width: 1200px;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--carousel-overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.carousel-text {
+  text-align: center;
+  color: var(--carousel-text-color);
+  font-family: var(--h1-font-family);
+  font-size: var(--h1-font-size);
+  max-width: 80%;
+  line-height: 1.4;
+  padding: 0 1rem;
+  z-index: 3;
+}
+
+/* Slick Carousel Navigation Styles */
+.slick-list {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.slick-track {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slick-dots {
+  bottom: 20px !important;
+  z-index: 10 !important;
+}
+
+.slick-dots li {
+  margin: 0 5px !important;
+}
+
+.slick-dots li button:before {
+  content: '•' !important;
+  color: var(--carousel-dot-inactive) !important;
+  font-size: 16px !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--carousel-dot-active) !important;
+}
+
+.slick-prev,
+.slick-next {
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 10 !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--carousel-text-color) !important;
+  font-size: 30px !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.3s ease;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1 !important;
+}
+
+.slick-prev {
+  left: 10px !important;
+}
+
+.slick-next {
+  right: 10px !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .homepage-carousel {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-carousel {
+    height: 80vh;
+  }
+
+  .carousel-slide {
+    height: 80vh;
+  }
+
+  .carousel-text {
+    font-size: var(--p-font-size);
+  }
+
+  .slick-dots {
+    bottom: 10px !important;
+  }
+
+  .slick-prev,
+  .slick-next {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 25px !important;
+  }
+}
+
+/* Accessibility and Interaction Enhancements */
+.slick-slide {
+  transition: opacity 0.3s ease;
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+
+.slick-slide:focus-visible {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 4px;
+}
